@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class acc extends Model
+{
+    protected $table = "accesorio";
+    protected $fillable = ['tipo'];
+    public function accmod(){
+        return $this->hasMany('App\Models\accMod','id_accesorio');
+    }
+    /*
+    use HasFactory;
+    */
+}
